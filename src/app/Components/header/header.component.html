@@ -1,0 +1,27 @@
+<div class="header">
+    <div class="mx-w grid aic">
+        <div><img
+                src="https://cdn.dribbble.com/users/371199/screenshots/17237982/media/ee4ef1e8d7fd193aacfb85df9d284c1c.jpg?resize=400x0" />
+        </div>
+        <div class="grid jcsb w100 aic">
+            <ul class="grid h-links">
+                <li *ngFor="let data of headerlinks"><a href="">{{data}}</a></li>
+            </ul>
+
+            <input type="text" placeholder="Search for Products.." />
+
+            <div class="grid aic">
+                <a href=""><button mat-raised-button color="blue">Contact</button></a>
+                <button mat-flat-button color="accent" class="h-btn-2 bo-r pos-rel" (click)="showCartItems(true)">
+                    Cart
+                    <span class="pos-ab cart-numb">{{headerCount}}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="grid jcsb w100 aic">
+        <ul class="grid h-linkss">
+            <li *ngFor="let data of headerProductslinks"><a href="">{{data}}</a></li>
+        </ul>
+    </div> -->
+</div>

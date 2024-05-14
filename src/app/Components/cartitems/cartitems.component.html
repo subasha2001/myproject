@@ -1,0 +1,42 @@
+<div *ngIf="showPopUp" class="popUp">
+    <button class="x" (click)="closePopUp()">X</button>
+    <div class="popUp-In">
+        <div class="card grid bx-sw">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Order Price</th>
+                    <th>Order Quantity</th>
+                    <th>increment</th>
+                    <th>decrement</th>
+                    <th>Delete</th>
+                    <th>Total</th>
+                </tr>
+                <tr *ngFor="let data of cartItems">
+                    <td *ngIf="data.addedToCart">{{data.product}}</td>
+                    <td *ngIf="data.addedToCart"><div><img src={{data.img}} /></div></td>
+                    <td *ngIf="data.addedToCart">{{data.price}}/kg</td>
+                    <td *ngIf="data.addedToCart">Rs {{data.price * data.atc}}</td>
+                    <td *ngIf="data.addedToCart">{{data.quantity * data.atc}} kg</td>
+                    <td *ngIf="data.addedToCart"><button class="btn-1 g" (click)="increment(data.product)">+</button></td>
+                    <td *ngIf="data.addedToCart"><button class="btn-1 r" (click)="decrement(data.product)">-</button></td>
+                    <td *ngIf="data.addedToCart"><button class="btn-2" (click)="deleteItem(data.product)">Delete</button></td>
+                    <td *ngIf="data.addedToCart">Rs {{data.price * data.atc}}</td>
+                </tr>
+                <tr>
+                    <td class="bor-non"></td>
+                    <td class="bor-non"></td>
+                    <td class="bor-non"></td>
+                    <td class="bor-non"></td>
+                    <td class="bor-non"></td>
+                    <td class="bor-non"></td>
+                    <td class="bor-non"></td>
+                    <td class="bor-non"></td>
+                    <td>Total Amount = {{totalSum}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

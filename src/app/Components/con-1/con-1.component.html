@@ -1,0 +1,29 @@
+<div class="card grid bx-sw pos-rel">
+  <div *ngFor="let data of card" class="hover-bx-sw bx-sw">
+    <div><img src={{data.img}} /></div>
+    <h2 class="tac bo-ra5">{{data.product}}</h2>
+    <div class="grid jcsa bo-ra5">
+      <p>{{data.quantity}} kg</p>
+      <p>Rs.{{data.price}}</p>
+    </div>
+    <div class="grid jcsb bo-ra5">
+      <button (click)="increment(data.product)" class="btn-1 g">+</button>
+      <p>{{data.quantity * data.oq}} kg</p>
+      <button (click)="decrement(data.product)" class="btn-1 r">-</button>
+      <p>Rs. {{data.price * data.oq}}</p>
+    </div>
+    <button mat-raised-button color="primary" (click)="addToCart(data.product)" class=" m-auto grid">Add To Cart</button>
+<!-- 
+    <section class="popup pos-ab bo-ra5" *ngIf="data.oq == data.atc">
+      <div>You have already ordered 0kg of Potato</div>
+      <div>Do you want to add more</div>
+      <button>Yes</button>
+      <button>No</button>
+    </section> -->
+  </div>
+
+
+</div>
+
+<app-cartitems [totalSum]="sum" (sendEvent)="receiveData($event)" (sendIncrement)="receiveIncrement($event)" (sendDecrement)="receiveDecrement($event)"></app-cartitems>
+

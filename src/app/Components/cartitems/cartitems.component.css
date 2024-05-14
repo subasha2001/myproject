@@ -1,0 +1,62 @@
+.popUp{
+    position: absolute;
+    top: 70px;
+    right: 125px;
+    border: 1px solid black;
+    z-index: 9;
+    background-color: white;
+    padding: 20px;
+}
+.popUp .x{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    background-color: red;
+    color: white;
+}
+.grid{display: flex;}
+.jcsa{justify-content: space-around;}
+.bx-sw{box-shadow: 10px 10px 50px -20px;}
+.card .grid.jcsa{background-color: #F1EEDC;}
+.tac{text-align: center;}
+img{width: 100%;}
+.bo-ra{border-radius: 10px;}
+h2.tac{background-color: #BED7DC;}
+.card{
+    max-width: 1300px;
+    flex-wrap: wrap;
+    margin: 0px auto 0;
+    padding: 20px;
+    border: 1px solid rgb(90, 86, 86);
+    border-radius: 20px;
+    background-color: #BC7FCD;
+    color: white;
+}
+.card > div{
+    margin: 15px auto;
+    border: 1px solid rgb(52, 52, 52);
+    width: 14%;
+    border-radius: 30px;
+    padding: 5px 5px 20px 5px;
+}
+.card div div{
+    width: 85%;
+    margin: 5px auto;
+}
+table tr div{max-width: 70px;}
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+.bor-non{
+    border: none;
+}
+.btn-1{
+    background-color: white;
+    border-radius: 50%;
+}
+.btn-1:hover{background-color: rgb(85, 205, 221);}
+.btn-1.g:active{background-color: green;color: white;}
+.btn-2:active{background-color: red;color: white;}
+.btn-1.r:active{background-color: red;color: white;}
